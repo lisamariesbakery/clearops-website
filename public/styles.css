@@ -124,6 +124,31 @@ main {
   line-height: 1.7;
 }
 
+.offering {
+  margin: 1.65rem auto 0;
+  max-width: 32rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  background-color: var(--sage-mist);
+  border-radius: 2px;
+}
+
+.offering-label {
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: var(--sage);
+}
+
+.offering-copy {
+  margin-top: 0.55rem;
+  color: var(--slate);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
 .cta {
   margin-top: 2.25rem;
 }
@@ -219,8 +244,21 @@ main {
     font-size: 1rem;
   }
 
+  .offering {
+    margin-top: 1.4rem;
+    padding: 1.1rem 1.05rem 1.15rem;
+  }
+
+  .offering-copy {
+    font-size: 1rem;
+  }
+
+  .cta {
+    margin-top: 1.85rem;
+  }
+
   .contact {
-    margin-top: 2.5rem;
+    margin-top: 2.25rem;
   }
 }
 
