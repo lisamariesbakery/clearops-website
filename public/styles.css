@@ -1,0 +1,231 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/fonts/cormorant-garamond-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-variable.woff2") format("woff2") tech("variations"),
+       url("/fonts/inter-variable.woff2") format("woff2-variations");
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --charcoal: #2E3440;
+  --sage: #7F9B72;
+  --offwhite: #FAF8F3;
+  --slate: #5B6270;
+  --sage-mist: #E6ECE1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 6vh, 4.5rem) 1.5rem;
+  background-color: var(--offwhite);
+  color: var(--charcoal);
+  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  width: 100%;
+  max-width: 36rem;
+  text-align: center;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: block;
+  width: min(17.5rem, 68vw);
+  height: auto;
+}
+
+.tagline {
+  margin-top: 2rem;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+  letter-spacing: 0.02em;
+  line-height: 1.35;
+  color: var(--charcoal);
+}
+
+.rule {
+  width: 4.5rem;
+  height: 1px;
+  margin: 1.35rem auto 0;
+  border: 0;
+  background: var(--sage);
+}
+
+.headline {
+  margin: 1.5rem auto 0;
+  max-width: 40rem;
+  font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  font-size: clamp(1.7rem, 4vw, 2.15rem);
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+  color: var(--charcoal);
+}
+
+.message {
+  margin: 1rem auto 0;
+  max-width: 32rem;
+  color: var(--slate);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.cta {
+  margin-top: 2.25rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.85rem;
+  background-color: var(--charcoal);
+  color: var(--offwhite);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+  border: 1px solid var(--charcoal);
+  border-radius: 2px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  background-color: var(--charcoal);
+  border-color: var(--sage);
+  box-shadow: 0 0 0 1px var(--sage);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 3rem;
+  font-style: normal;
+  font-size: 0.9375rem;
+  color: var(--slate);
+}
+
+.contact a {
+  color: var(--charcoal);
+  text-decoration: none;
+  border-bottom: 1px solid var(--sage);
+  padding-bottom: 0.08rem;
+}
+
+.contact a:hover,
+.contact a:focus-visible {
+  color: var(--charcoal);
+  border-bottom-color: var(--charcoal);
+}
+
+.contact a:focus-visible {
+  outline: 2px solid var(--sage);
+  outline-offset: 3px;
+}
+
+.place {
+  color: var(--slate);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 2.25rem 1.25rem 2.75rem;
+    align-items: stretch;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 5rem);
+    min-height: calc(100dvh - 5rem);
+  }
+
+  .logo {
+    width: min(14.5rem, 72vw);
+  }
+
+  .tagline {
+    margin-top: 1.65rem;
+  }
+
+  .headline {
+    margin-top: 1.35rem;
+    max-width: 20rem;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+
+  .contact {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
